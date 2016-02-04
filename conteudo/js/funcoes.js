@@ -1,11 +1,14 @@
 ﻿'use strict';
 
 // ----- NARRAÇÃO ----- //
-
-var narracao = new Howl({
+var audio_total = new Howl({
 	buffer: false,
-    urls: ['media/audio/loc.ogg', 'media/audio/loc.wav', 'media/audio/loc.mp3'],
+    urls: ['media/audio/audio_total.ogg', 'media/audio/audio_total.wav', 'media/audio/audio_total.mp3'],
     sprite: {
+		/* Efeitos */
+		efeito1: [68000, 1000],
+		efeito2: [70600, 1000],
+		/* Narrações*/
         text1: [0, 34000],
         text2: [33000, 6000],
         text3: [39000, 8000],
@@ -13,23 +16,7 @@ var narracao = new Howl({
         text5: [57500, 5000],
     }
 });
-var narracao2 = new Howl({
-	buffer: false,
-    urls: ['media/audio/loc.mp3'],
-    sprite: {
-        text1: [0, 34000],
-    }
-});
-var efeito1 = new Howl({
-	buffer: false,
-    urls: ['media/audio/hit.mp3'],
-    sprite: { sound: [0, 1000], }
-});
-var efeito2 = new Howl({
-	buffer: false,
-    urls: ['media/audio/blow.mp3'],
-    sprite: { sound: [0, 1000], }
-});
+
 
 var startGame = {
 
@@ -58,14 +45,14 @@ var startGame = {
             $('.dardoShadow').delay(500).fadeIn(500).animate({ 'top': '553px', 'left': '755px' }, 'fast');
         });
         $('.dardoPin, .dardoBase').fadeOut(1000, function () { $('.dardoPin, .dardoBase').fadeIn(500); });
-        setTimeout(function () { efeito1.play('sound'); }, 1450);
-        setTimeout(function () { narracao.play('text1'); }, 2700);
+        setTimeout(function () { audio_total.play('efeito1'); }, 1450);
+        setTimeout(function () { audio_total.play('text1'); }, 2700);
         $('#composto').text(decom);
 
         // ----- SAIR DO LIGHTBOX ----- //
 
         $('.exit').click(function () {
-            narracao.stop();
+            audio_total.stop();
             if (reset == true) {
                 reset = false;
                 decom = 0;
@@ -122,20 +109,20 @@ var startGame = {
                         select.sort(comparar);
                         concat = select.join(' x ');
                         $('#expressao').text(concat);
-                        setTimeout(function () { efeito1.play('sound'); }, 350);
+                        setTimeout(function () { audio_total.play('efeito1'); }, 350);
                         $('.info, .calculo').css('z-index', '4');
                         $('.lBoxBord, .lBoxBord-corr, .lBoxBord-err, .lBoxBord-att').fadeOut();
                         $('.lBoxBord-end, .overlay, .exit').delay(500).fadeIn();
-                        narracao.play('text5');
+                        audio_total.play('text5');
                     }
                     else {
                         $('.info, .calculo').css('z-index', '4');
                         $('#expressao').text(concat + ' x ' + decom + ' =');
-                        setTimeout(function () { efeito1.play('sound'); }, 350);
+                        setTimeout(function () { audio_total.play('efeito1'); }, 350);
                         setTimeout(function () {
                             $('.lBoxBord, .lBoxBord-err, .lBoxBord-att').fadeOut();
                             $('.lBoxBord-corr, .overlay, .exit').delay(800).fadeIn();
-                            narracao.play('text4');
+                            audio_total.play('text4');
                         }, 800);
                     }
                     animaDardo($(this).index());
@@ -144,8 +131,8 @@ var startGame = {
                     $('.info, .calculo').css('z-index', '4');
                     $('.lBoxBord, .lBoxBord-corr, .lBoxBord-att').fadeOut();
                     $('.lBoxBord-err, .overlay, .exit').delay(1000).fadeIn();
-                    setTimeout(function () { efeito2.play('sound'); }, 750);
-                    narracao.play('text3');
+                    setTimeout(function () { audio_total.play('efeito2'); }, 750);
+                    audio_total.play('text3');
                     animaDardoErro();
                 }
             }
@@ -157,8 +144,8 @@ var startGame = {
                 $('.info, .calculo').css('z-index', '2');
                 $('.lBoxBord, .lBoxBord-corr, .lBoxBord-err').fadeOut();
                 $('.lBoxBord-att, .overlay, .exit').delay(800).fadeIn();
-                setTimeout(function () { efeito2.play('sound'); }, 750);
-                narracao.play('text2');
+                setTimeout(function () { audio_total.play('efeito2'); }, 750);
+                audio_total.play('text2');
                 animaDardoErro();
             }
         });
@@ -245,13 +232,13 @@ var startGame = {
 // startGame.init();
 
 function iniciar_com_tap(){
-	// Testar //
-	var ua = navigator.userAgent.toLowerCase();
-		var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-		if(isAndroid) {
+// Testar //
+		var is_droid = navigator.userAgent.toLowerCase();
+		var true_droid = is_droid.indexOf("android") > -1;
+		if(true_droid) {
 		}else{
-			narracao.play('text1');
-			narracao.stop();
+			audio_total.play('text1');
+			audio_total.stop();
 			Howler.codecs();
 	}
 	// Testar //	
