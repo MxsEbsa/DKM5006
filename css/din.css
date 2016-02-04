@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'dincond-boldregular';
+    src: url(fonts_apoema/din_cond-bold-webfont.eot);
+    src: url(fonts_apoema/din_cond-bold-webfont.eot?#iefix) format('embedded-opentype'),
+         url(fonts_apoema/din_cond-bold-webfont.woff) format('woff'),
+         url(fonts_apoema/din_cond-bold-webfont.ttf) format('truetype'),
+         url(fonts_apoema/din_cond-bold-webfont.svg#dincond-boldregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dincond-lightregular';
+    src: url(fonts_apoema/din_cond-light-webfont.eot);
+    src: url(fonts_apoema/din_cond-light-webfont.eot?#iefix) format('embedded-opentype'),
+         url(fonts_apoema/din_cond-light-webfont.woff) format('woff'),
+         url(fonts_apoema/din_cond-light-webfont.ttf) format('truetype'),
+         url(fonts_apoema/din_cond-light-webfont.svg#dincond-lightregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dincond-mediumregular';
+    src: url(fonts_apoema/din_cond-medium-webfont.eot);
+    src: url(fonts_apoema/din_cond-medium-webfont.eot?#iefix) format('embedded-opentype'),
+         url(fonts_apoema/din_cond-medium-webfont.woff) format('woff'),
+         url(fonts_apoema/din_cond-medium-webfont.ttf) format('truetype'),
+         url(fonts_apoema/din_cond-medium-webfont.svg#dincond-mediumregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

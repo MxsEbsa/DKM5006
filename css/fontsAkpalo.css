@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'MyriadStdTilt';
+	src: url('fonts_akpalo/myriadstdtilt-webfont.eot');
+    src: url('fonts_akpalo/myriadstdtilt-webfont.eot') format('embedded-opentype'),
+         url('fonts_akpalo/myriadstdtilt-webfont.woff2') format('woff2'),
+         url('fonts_akpalo/myriadstdtilt-webfont.woff') format('woff'),
+         url('fonts_akpalo/myriadstdtilt-webfont.ttf') format('truetype'),
+         url('fonts_akpalo/myriadstdtilt-webfont.svg#myriadstdtilt-webfont') format('svg');
+
+}
+@font-face {
+    font-family: 'HighlanderStd-Bold';
+	src: url('fonts_akpalo/highlanderstd-bold-webfont.eot');
+    src: url('fonts_akpalo/highlanderstd-bold-webfont.eot') format('embedded-opentype'),
+         url('fonts_akpalo/highlanderstd-bold-webfont.woff2') format('woff2'),
+         url('fonts_akpalo/highlanderstd-bold-webfont.woff') format('woff'),
+         url('fonts_akpalo/highlanderstd-bold-webfont.ttf') format('truetype'),
+         url('fonts_akpalo/highlanderstd-bold-webfont.svg#cronospro-regular-webfont') format('svg');
+}
+@font-face {
+    font-family: 'HighlanderStd-Medium';
+	src: url('fonts_akpalo/highlanderstd-medium-webfont.eot');
+    src: url('fonts_akpalo/highlanderstd-medium-webfont.eot') format('embedded-opentype'),
+         url('fonts_akpalo/highlanderstd-medium-webfont.woff2') format('woff2'),
+         url('fonts_akpalo/highlanderstd-medium-webfont.woff') format('woff'),
+         url('fonts_akpalo/highlanderstd-medium-webfont.ttf') format('truetype'),
+         url('fonts_akpalo/highlanderstd-medium-webfont.svg#highlanderstd-medium-webfont') format('svg');
+}
+@font-face {
+    font-family: 'CronosPro-Regular';
+	src: url('fonts_akpalo/cronospro-regular-webfont.eot');
+    src: url('fonts_akpalo/cronospro-regular-webfont.eot') format('embedded-opentype'),
+         url('fonts_akpalo/cronospro-regular-webfont.woff2') format('woff2'),
+         url('fonts_akpalo/cronospro-regular-webfont.woff') format('woff'),
+         url('fonts_akpalo/cronospro-regular-webfont.ttf') format('truetype'),
+         url('fonts_akpalo/cronospro-regular-webfont.svg#cronospro-regular-webfont') format('svg');
+}
+
+
+

@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+    <title>Dardos Primos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="OED">
+
+        <!-- INI: DARDO -->
+
+        <div class="tela">
+            <div class="dardoShadow"></div>
+            <div class="dardoBase"></div>
+            <div class="dardo"></div>
+            <div class="dardoPin"></div>
+
+        <!-- FIM: DARDO -->
+
+        <!-- INI: REGRAS -->
+
+            <div class="regras">Regras</div>
+
+        <!-- FIM: REGRAS -->
+
+        <!-- INI: AREA DE CALCULO -->
+
+            <p class="info">Decomponha:</p>
+            <div class="calculo transition">
+                <div class="composto">
+                    <p id="composto"></p>
+                </div>
+                <div class="sinal">
+                    <p id="sinal">=</p>
+                </div>
+                <div class="expressao">
+                    <p id="expressao"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIM: AREA DE CALCULO -->
+
+
+        <!-- INI: ALVO -->
+
+        <div class="alvo">
+            <img src="./img/alvo.png" id="alvo" />
+            <img src="./img/over.png" class="over" />
+            <div class=" area-01 anima"></div>
+            <div class="area-02 anima"></div>
+            <div class="area-03 anima"></div>
+            <div class="area-04 anima"></div>
+            <div class="area-05 anima"></div>
+            <div class="area-06 anima"></div>
+            <div class="area-07 anima"></div>
+            <div class="area-08 anima"></div>
+            <div class="area-09 anima"></div>
+            <div class="area-10 anima"></div>
+            <div class="area-11 anima"></div>
+            <div class="area-12 anima"></div>
+            <div class="num-01 num">11</div>
+            <div class="num-02 num">1</div>
+            <div class="num-03 num">5</div>
+            <div class="num-04 num">7</div>
+            <div class="num-05 num">7</div>
+            <div class="num-06 num">3</div>
+            <div class="num-07 num">11</div>
+            <div class="num-08 num">2</div>
+            <div class="num-09 num">2</div>
+            <div class="num-10 num">1</div>
+            <div class="num-11 num">5</div>
+            <div class="num-12 num">3</div>
+            <map name="mapVet">
+                <area shape="poly" href="javascript:void(0)" class="hov val01 val" coords="62,158,100,108,146,69,206,40,291,27,291,147,236,157,204,174,165,219" n="11" />
+                <area shape="poly" href="javascript:void(0)" class="hov val02" coords="290,28,350,34,396,49,440,73,475,103,519,160,415,217,384,183,347,156,292,147" n="1" />
+                <area shape="poly" href="javascript:void(0)" class="hov val03 val" coords="290,290,166,218,203,179,241,156,290,149" n="5" />
+                <area shape="poly" href="javascript:void(0)" class="hov val04 val" coords="290,290,291,150,339,155,385,185,416,220" n="7" />
+                <area shape="poly" href="javascript:void(0)" class="hov val05 val" coords="62,159,39,211,29,262,28,328,43,385,62,422,165,362,151,331,146,297,149,260,166,219" n="7" />
+                <area shape="poly" href="javascript:void(0)" class="hov val06 val" coords="168,220,290,290,166,362,150,318,149,266" n="3" />
+                <area shape="poly" href="javascript:void(0)" class="hov val07 val" coords="291,291,416,221,429,254,434,288,429,329,414,363" n="11" />
+                <area shape="poly" href="javascript:void(0)" class="hov val08 val" coords="414,220,519,161,538,200,550,248,553,295,545,356,532,394,518,421,465,392,413,362,430,325,432,275" n="2" />
+                <area shape="poly" href="javascript:void(0)" class="hov value09 val " coords="167,365,291,291,290,434,249,429,208,410,185,390" n="2" />
+                <area shape="poly" href="javascript:void(0)" class="hov val10" coords="291,435,291,292,415,363,397,388,368,414,331,428" n="1" />
+                <area shape="poly" href="javascript:void(0)" class="hov val11 val" coords="62,423,167,364,184,389,207,411,240,427,290,435,290,555,228,549,167,526,107,483" n="5" />
+                <area shape="poly" href="javascript:void(0)" class="hov val12 val" coords="291,436,336,429,387,402,416,365,519,424,488,467,444,507,388,538,292,556" n="3" />
+            </map>
+        </div>
+        <img src="./img/alvo.png" usemap="#mapVet" id="mapHid" />
+
+        <!-- FIM: ALVO -->
+
+
+        <!-- INI: LIGHTBOXES -->
+
+        <div class="overlay">
+            <div class="lBoxBord">
+                <div class="lBox">
+                    <h3 class="tx1">Regras</h3>
+                    <ol>
+                        <li id="tx2"><span class="txSpan">O objetivo do jogo é decompor o número do canto inferior esquerdo da tela. Para isso, você precisa acertar os divisores primos desse número no alvo.</span></li>
+                        <li id="tx3"><span class="txSpan">Se você acertar o alvo, ao lado da igualdade surgirá a multiplicação desse primo por outro número. Esse novo número também precisa ser decomposto.</span></li>
+                        <li id="tx4"><span class="txSpan">O jogo termina quando não for possível decompor mais nenhum número.</span></li>
+                    </ol>
+                </div>
+                <div class="exit"></div>
+            </div>
+            <div class="lBoxBord-corr">
+                <div class="lBox-corr">
+                    <h3 class="tx1-corr">Muito bem, você acertou!</h3>
+                    <p id="tx2-corr">Continue a decomposição clicando em um número primo e divisor do último número composto.</p>
+                </div>
+                <div class="exit"></div>
+            </div>
+            <div class="lBoxBord-err">
+                <div class="lBox-err">
+                    <h3 class="tx1-err">Atenção!</h3>
+                    <p id="tx2-err">Esse número é primo, mas não é divisor do último número da expressão.</p>
+                </div>
+                <div class="exit"></div>
+            </div>
+            <div class="lBoxBord-end">
+                <div class="lBox-end">
+                    <h3 class="tx1-end">Parabéns!</h3>
+                    <p id="tx2-end">A decomposição está completa.</p>
+                </div>
+                <div class="exit"></div>
+            </div>
+            <div class="lBoxBord-att">
+                <div class="lBox-att">
+                    <h3 class="tx1-att">Atenção!</h3>
+                    <p id="tx2-att">O número 1 não é primo. Tente novamente.</p>
+                </div>
+                <div class="exit"></div>
+            </div>
+        </div>
+
+        <!-- FIM: LIGHTBOXES -->
+
+    </div>
+	<script>
+		function iniciar_oed_frame(){
+			iniciar_com_tap();
+		}	
+	</script>
+    <script type="text/javascript" src="../js/carrega_oed.js"></script>
+    <script type="text/javascript" src="js/funcoes.js" charset="UTF-8"></script>
+</body>
+</html>

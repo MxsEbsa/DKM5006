@@ -1,0 +1,730 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'cronospro-regular-webfont';
+    src: url('../fonts/cronospro-regular-webfont.ttf') format('truetype'), url('../fonts/cronospro-regular-webfont.svg#cronospro-regular-webfont') format('svg');
+}
+
+@font-face {
+    font-family: 'highlanderstd-medium-webfont';
+    src: url('../fonts/highlanderstd-medium-webfont.ttf') format('truetype'), url('../fonts/highlanderstd-medium-webfont.svg#highlanderstd-medium-webfont') format('svg');
+}
+
+@font-face {
+    font-family: 'highlanderstd-bold-webfont';
+    src: url('../fonts/highlanderstd-bold-webfont.ttf') format('truetype'), url('../fonts/highlanderstd-bold-webfont.svg#highlanderstd-bold-webfont') format('svg');
+}
+
+.OED {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1024px;
+    height: 660px;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.tela {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1024px;
+    height: 660px;
+    background-image: url('../img/bg-geral.jpg');
+    display: none;
+}
+
+.transition {
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+}
+
+/* ----- CSS DARDO ----- */
+
+.dardo {
+    position: absolute;
+    top: -44px;
+    left: 1036px;
+    width: 194px;
+    height: 237px;
+    background-image: url('../img/dardo.png');
+    z-index: 1;
+}
+
+.dardoShadow {
+    position: absolute;
+    top: 353px;
+    left: 1190px;
+    width: 163px;
+    height: 50px;
+    background-image: url('../img/dardoShadow.png');
+}
+
+.dardoBase {
+    position: absolute;
+    top: 590px;
+    left: 726px;
+    width: 37px;
+    height: 24px;
+    background-image: url('../img/dardoBase.png');
+    display: none;
+}
+
+.dardoPin {
+    position: absolute;
+    top: 597px;
+    left: 731px;
+    width: 23px;
+    height: 7px;
+    background-image: url('../img/dardoBasePin.png');
+    display: none;
+    z-index: 2;
+}
+
+/* ----- CSS REGRAS ----- */
+
+.regras {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 134px;
+    height: 54px;
+    background-image: url('../img/regras.png');
+    font-family: 'cronospro-regular-webfont';
+    font-size: 30px;
+    font-weight: bolder;
+    color: #222222;
+    text-align: center;
+    text-indent: -5px;
+    line-height: 48px;
+    display: none;
+    cursor: pointer;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+    -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+}
+
+/* ----- CSS AREA DE CALCULO ----- */
+
+.info {
+    position: absolute;
+    top: 555px;
+    left: 7px;
+    font-family: 'cronospro-regular-webfont';
+    font-size: 22px;
+    color: #fff;    
+    display: none;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+    -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+}
+
+.calculo {
+    position: absolute;
+    bottom: -50px;
+    left: 0px;
+    width: 750px;
+    height: 50px;
+}
+
+    .calculo .composto {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        padding: 0 15px;  
+        background-image: url('../img/tela-bg-01.png');
+        background-size: 100% 100%;
+        float: left;
+        display: none;
+    }
+
+        .calculo .composto #composto {
+            font-family: 'highlanderstd-medium-webfont';
+            font-size: 38px;
+            color: #fff;
+            text-align: center;
+            margin-top: 5px;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+    .calculo .sinal {
+        position: relative;
+        width: 33px;
+        height: 50px;
+        background-image: url('../img/tela-bg-02.png');
+        background-size: 100% 100%;
+        float: left;
+        display: none;
+    }
+
+        .calculo .sinal #sinal {
+            font-family: 'highlanderstd-medium-webfont';
+            font-size: 38px;
+            color: #000;
+            margin: 5px 0px 0px 7px;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+    .calculo .expressao {
+        position: relative;
+        width: 350px;
+        height: 50px;
+        border: inset 1px rgba(130,130,130, 0.7);
+        background-color: rgba(30,30,30, 0.5);
+        display: none;
+        float: left;
+        border-radius: 0px 10px 0px 0px;
+        -webkit-border-radius: 0px 10px 0px 0px;
+    }
+
+        .calculo .expressao #expressao {
+            font-family: 'highlanderstd-medium-webfont';
+            font-size: 38px;
+            color: #EB6E22;
+            margin: 5px 0px 0px 15px;
+            letter-spacing: -2px;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+/* ----- ALVO ----- */
+
+.alvo {
+    position: absolute;
+    top: -620px;
+    left: 0px;
+    display: block;
+}
+
+    #alvo {
+        position: absolute;
+        top: 41px;
+        left: 219px;
+        width: 580px;
+        height: 582px;
+    }
+
+    .over {
+        position: absolute;
+        top: 65px;
+        left: 249px;
+        width: 524px;
+        height: 524px;
+        background-repeat: no-repeat;
+        display: block;
+        opacity: 0.6;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+    .area-01 {
+        position: absolute;
+        top: 61px;
+        left: 271px;
+        width: 249px;
+        height: 211px;
+        background-image: url('../img/area-01.png');
+        display: none;
+    }
+
+    .area-02 {
+        position: absolute;
+        top: 61px;
+        left: 497px;
+        width: 249px;
+        height: 211px;
+        background-image: url('../img/area-02.png');
+        display: none;
+    }
+
+    .area-03 {
+        position: absolute;
+        top: 178px;
+        left: 374px;
+        width: 145px;
+        height: 163px;
+        background-image: url('../img/area-03.png');
+        display: none;
+    }
+
+    .area-04 {
+        position: absolute;
+        top: 179px;
+        left: 500px;
+        width: 145px;
+        height: 164px;
+        background-image: url('../img/area-04.png');
+        display: none;
+    }
+
+    .area-05 {
+        position: absolute;
+        top: 191px;
+        left: 238px;
+        width: 158px;
+        height: 283px;
+        background-image: url('../img/area-05.png');
+        display: none;
+    }
+
+    .area-06 {
+        position: absolute;
+        top: 248px;
+        left: 355px;
+        width: 166px;
+        height: 165px;
+        background-image: url('../img/area-06.png');
+        display: none;
+        transform: rotate(-2deg);
+        -webkit-transform: rotate(-2deg);
+    }
+
+    .area-07 {
+        position: absolute;
+        top: 250px;
+        left: 499px;
+        width: 164px;
+        height: 164px;
+        background-image: url('../img/area-07.png');
+        display: none;
+    }
+
+    .area-08 {
+        position: absolute;
+        top: 191px;
+        left: 624px;
+        width: 159px;
+        height: 284px;
+        background-image: url('../img/area-08.png');
+        display: none;
+    }
+
+    .area-09 {
+        position: absolute;
+        top: 322px;
+        left: 374px;
+        width: 145px;
+        height: 163px;
+        background-image: url('../img/area-09.png');
+        display: none;
+    }
+
+    .area-10 {
+        position: absolute;
+        top: 323px;
+        left: 499px;
+        width: 145px;
+        height: 164px;
+        background-image: url('../img/area-10.png');
+        display: none;
+    }
+
+    .area-11 {
+        position: absolute;
+        top: 393px;
+        left: 272px;
+        width: 249px;
+        height: 211px;
+        background-image: url('../img/area-11.png');
+        display: none;
+    }
+
+    .area-12 {
+        position: absolute;
+        top: 392px;
+        left: 498px;
+        width: 249px;
+        height: 211px;
+        background-image: url('../img/area-12.png');
+        display: none;
+    }
+
+    .num {
+        position: absolute;
+        font-size: 50px;
+        font-family: 'highlanderstd-bold-webfont';
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+    }
+
+    .num-01 {
+        top: 126px;
+        left: 379px;
+        color: #F2F2F2;
+    }
+
+    .num-02 {
+        top: 126px;
+        left: 589px;
+        color: #E73429;
+    }
+
+    .num-03 {
+        top: 224px;
+        left: 446px;
+        color: #E73429;
+    }
+
+    .num-04 {
+        top: 224px;
+        left: 537px;
+        color: #F2F2F2;
+    }
+
+    .num-05 {
+        top: 299px;
+        left: 294px;
+        color: #E73429;
+    }
+
+    .num-06 {
+        top: 299px;
+        left: 400px;
+        color: #F2F2F2;
+    }
+
+    .num-07 {
+        top: 299px;
+        left: 564px;
+        color: #E73429;
+    }
+
+    .num-08 {
+        top: 299px;
+        left: 690px;
+        color: #F2F2F2;
+    }
+
+    .num-09 {
+        top: 375px;
+        left: 447px;
+        color: #E73429;
+    }
+
+    .num-10 {
+        top: 375px;
+        left: 539px;
+        color: #F2F2F2;
+    }
+
+    .num-11 {
+        top: 477px;
+        left: 392px;
+        color: #F2F2F2;
+    }
+
+    .num-12 {
+        top: 477px;
+        left: 591px;
+        color: #E73429;
+    }
+
+    #mapHid {
+        position: absolute;
+        top: 41px;
+        left: 219px;
+        width: 580px;
+        height: 582px;
+        opacity: 0;
+        display: none;
+    }
+
+/* ----- CSS LIGHTBOXES ----- */
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1024px;
+    height: 660px;
+    background-image: url('../img/overlay.png');
+    display: none;
+    z-index: 3;
+}
+
+.lBoxBord {
+    position: absolute;
+    top: 166px;
+    left: 202px;
+    width: 621px;
+    height: 351px;
+    background-color: rgba(50,50,50, 0.5);
+    display: block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+    .lBox {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 601px;
+        height: 331px;
+        background-color: #F3F3F3;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+    ol {
+        font-family: 'highlanderstd-medium-webfont';
+        font-size: 40px;
+        color: #007AA0;
+    }
+
+        .tx1 {
+            position: absolute;
+            top: -28px;
+            left: 34px;
+            font-family: 'highlanderstd-medium-webfont';
+            font-size: 40px;
+            font-weight: normal;
+            color: #007AA0;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+        #tx2 {
+            position: absolute;
+            top: 74px;
+            left: 87px;
+            padding-right: 25px;
+            line-height: 13px;
+        }
+
+        #tx3 {
+            position: absolute;
+            top: 166px;
+            left: 87px;
+            padding-right: 25px;
+            line-height: 13px;
+        }
+
+        #tx4 {
+            position: absolute;
+            top: 258px;
+            left: 87px;
+            padding-right: 25px;
+            line-height: 13px;
+        }
+
+        .txSpan {
+            font-family: 'cronospro-regular-webfont';
+            font-size: 22px;
+            color: #222222;
+            line-height: 24px;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+.lBoxBord-corr {
+    position: absolute;
+    top: 250px;
+    left: 202px;
+    width: 621px;
+    height: 161px;
+    background-color: rgba(50,50,50, 0.5);
+    display: none;
+    z-index: 3;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+    .lBox-corr {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 601px;
+        height: 140px;
+        background-color: #F3F3F3;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+        .tx1-corr {
+            position: absolute;
+            top: -28px;
+            left: 34px;    
+            font-family: 'highlanderstd-medium-webfont';
+            font-size: 40px;
+            font-weight: normal;
+            color: #007AA0;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+        #tx2-corr {
+            position: absolute;
+            top: 53px;
+            left: 32px;
+            font-family: 'cronospro-regular-webfont';
+            font-size: 22px;
+            line-height: 24px;
+            color: #222222;
+            padding-right: 25px;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+.lBoxBord-err {
+    position: absolute;
+    top: 249px;
+    left: 202px;
+    width: 621px;
+    height: 169px;
+    background-color: rgba(50,50,50, 0.5);
+    display: none;
+    z-index: 3;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+    .lBox-err {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 601px;
+        height: 147px;
+        background-color: #F3F3F3;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+        .tx1-err {
+            position: absolute;
+            top: -28px;
+            left: 34px;
+            font-family: 'highlanderstd-medium-webfont';
+            font-size: 40px;
+            font-weight: normal;
+            color: #007AA0;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+        #tx2-err {
+            position: absolute;
+            top: 53px;
+            left: 32px;
+            font-family: 'cronospro-regular-webfont';
+            font-size: 22px;
+            line-height: 24px;
+            color: #222222;
+            padding-right: 25px;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+.lBoxBord-end {
+    position: absolute;
+    top: 256px;
+    left: 202px;
+    width: 621px;
+    height: 151px;
+    background-color: rgba(50,50,50, 0.5);
+    display: none;
+    z-index: 3;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+    .lBox-end {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 601px;
+        height: 131px;
+        background-color: #F3F3F3;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+        .tx1-end {
+            position: absolute;
+            top: -28px;
+            left: 34px;
+            font-family: 'highlanderstd-medium-webfont';
+            font-size: 40px;
+            font-weight: normal;
+            color: #007AA0;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+        #tx2-end {
+            position: absolute;
+            top: 53px;
+            left: 32px;
+            font-family: 'cronospro-regular-webfont';
+            font-size: 22px;
+            line-height: 24px;
+            color: #222222;
+            padding-right: 25px;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+.lBoxBord-att {
+    position: absolute;
+    top: 265px;
+    left: 202px;
+    width: 621px;
+    height: 136px;
+    background-color: rgba(50,50,50, 0.5);
+    display: none;
+    z-index: 3;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+    .lBox-att {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 601px;
+        height: 116px;
+        background-color: #F3F3F3;
+        border-radius: 5px;
+    }
+
+        .tx1-att {
+            position: absolute;
+            top: -31px;
+            left: 34px;
+            font-family: 'highlanderstd-medium-webfont';
+            font-size: 40px;
+            font-weight: normal;
+            color: #007AA0;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+        #tx2-att {
+            position: absolute;
+            top: 44px;
+            left: 32px;
+            font-family: 'cronospro-regular-webfont';
+            font-size: 22px;
+            line-height: 24px;
+            color: #222222;
+            padding-right: 25px;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+            -webkit-text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+    .exit {
+        position: absolute;
+        top: -28px;
+        left: 570px;
+        width: 76px;
+        height: 78px;
+        background-image: url('../img/exit.png');
+        cursor: pointer;
+        display: block;
+        z-index: 5;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+    }
